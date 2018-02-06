@@ -1,0 +1,4 @@
+C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\BA_First_Prototype\BA_First_Prototype.csproj;x86
+C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86
+C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
+C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86

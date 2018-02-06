@@ -1,0 +1,297 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+using System;
+using NUnit.Framework.Internal.Filters;
+using UnityEngine;
+
+namespace HoloToolkit.Unity
+{
+    /// <summary>
+    /// DirectionIndicator creates an Indicator around the Cursor showing
+    /// what direction to turn to find this GameObject.
+    /// </summary>
+    public class DirectionIndicator : MonoBehaviour
+    {
+        [Tooltip("The Cursor object the direction Indicator will be positioned around.")]
+        public GameObject Cursor;
+
+        [Tooltip("Model to display the direction to the object this script is attached to.")]
+        public GameObject DirectionIndicatorObject;
+
+     
+
+        [Tooltip("Color to shade the direction Indicator.")]
+        public Color DirectionIndicatorColor = Color.red;
+
+        [Tooltip("Allowable percentage inside the holographic frame to continue to show a directional Indicator.")]
+        //Default range: Range(-0.3f, 0.3f)]
+        [Range(-0.3f, 0.8f)]
+        public float VisibilitySafeFactor = 0.5f;
+
+        [Tooltip("Multiplier to decrease the distance from the Cursor center an object is rendered to keep it in view.")]
+        [Range(0.1f, 1.0f)]
+        public float MetersFromCursor = 0.3f;
+
+
+        public GameObject TargetGameObject;
+        public GameObject LineRenderer;
+        private LineRenderer line;
+        private Vector3 cursorIndicatorDirection;
+
+        public Vector3 middlePoint;
+        private Vector3 cursorToMiddlePoint;
+        private Vector3 middlePointToTarget;
+        private float overallVectorLength;
+        private float currentVectorLength;
+        private float currentAngle;
+        private float overallAngle;
+        private float distancePercent;
+        private Vector3 targetDir;
+        private Vector3 oldCursorPosition;
+        private Boolean targetBehind;
+        private float[] xValuesOfEdgeBoxes;
+
+        // The default rotation of the Cursor direction Indicator.
+        private Quaternion directionIndicatorDefaultRotation = Quaternion.identity;
+
+        // Cache the MeshRenderer for the on-Cursor Indicator since it will be enabled and disabled frequently.
+        private Renderer directionIndicatorRenderer;
+
+        // Cache the Material to prevent material leak.
+        private Material indicatorMaterial;
+
+        // Check if the Cursor direction Indicator is visible.
+        private bool isDirectionIndicatorVisible;
+
+        public void Awake()
+        {
+            line = LineRenderer.GetComponent<LineRenderer>();
+            line.material.color = Color.red;
+            if (Cursor == null)
+            {
+                Debug.LogError("Please include a GameObject for the Cursor.");
+            }
+
+            if (DirectionIndicatorObject == null)
+            {
+                Debug.LogError("Please include a GameObject for the Direction Indicator.");
+            }
+
+            // Instantiate the direction Indicator.
+            DirectionIndicatorObject = InstantiateDirectionIndicator(DirectionIndicatorObject);
+
+            if (DirectionIndicatorObject == null)
+            {
+                Debug.LogError("Direction Indicator failed to instantiate.");
+            }
+        }
+
+        public void OnDestroy()
+        {
+            DestroyImmediate(indicatorMaterial);
+            Destroy(DirectionIndicatorObject);
+        }
+
+        private GameObject InstantiateDirectionIndicator(GameObject directionIndicator)
+        {
+            if (directionIndicator == null)
+            {
+                return null;
+            }
+
+            GameObject indicator = Instantiate(directionIndicator);
+
+            // Set local variables for the Indicator.
+            directionIndicatorDefaultRotation = indicator.transform.rotation;
+            directionIndicatorRenderer = indicator.GetComponent<Renderer>();
+
+            // Start with the Indicator disabled.
+            directionIndicatorRenderer.enabled = false;
+
+            // Remove any colliders and rigidbodies so the indicators do not interfere with Unity's physics system.
+            foreach (Collider indicatorCollider in indicator.GetComponents<Collider>())
+            {
+                Destroy(indicatorCollider);
+            }
+
+            foreach (Rigidbody rigidBody in indicator.GetComponents<Rigidbody>())
+            {
+                Destroy(rigidBody);
+            }
+
+            indicatorMaterial = directionIndicatorRenderer.material;
+            indicatorMaterial.color = DirectionIndicatorColor;
+            indicatorMaterial.SetColor("_TintColor", DirectionIndicatorColor);
+
+            return indicator;
+        }
+
+        public void Update()
+        {
+            if (DirectionIndicatorObject == null)
+            {
+                return;
+            }
+
+            // Direction from the Main Camera to this script's gameObject. --> Vector von Spitze zu Fuß  !CameraPos = CursorPos!
+            Vector3 camToObjectDirection = TargetGameObject.transform.position - Cursor.transform.position; // Camera.main.transform.position;
+            //currentVectorLength = camToObjectDirection.magnitude;
+            camToObjectDirection.Normalize(); //Same Direction but Magnitude (Length = 1)
+
+            // The Cursor Indicator should only be visible if the target is not visible.
+            isDirectionIndicatorVisible = !IsTargetVisible();
+            directionIndicatorRenderer.enabled = isDirectionIndicatorVisible;
+
+            if (isDirectionIndicatorVisible)
+            {
+                Vector3 position;
+                Quaternion rotation;
+                GetDirectionIndicatorPositionAndRotation(
+                    camToObjectDirection,
+                    out position,
+                    out rotation);
+
+                DirectionIndicatorObject.transform.position = position;
+                DirectionIndicatorObject.transform.rotation = rotation;
+            }
+        }
+        /*
+        public void setOverallVectorLength()
+        {
+            Vector3 camToObjectDirection = TargetGameObject.transform.position - Camera.main.transform.position;
+            overallVectorLength = camToObjectDirection.magnitude;
+        }
+        */
+        private bool IsTargetVisible()
+        {
+            // This will return true if the target's mesh is within the Main Camera's view frustums.
+            Vector3 targetViewportPosition = Camera.main.WorldToViewportPoint(TargetGameObject.transform.position);
+            return (targetViewportPosition.x > VisibilitySafeFactor && targetViewportPosition.x < 1 - VisibilitySafeFactor &&
+                    targetViewportPosition.y > VisibilitySafeFactor && targetViewportPosition.y < 1 - VisibilitySafeFactor &&
+                    targetViewportPosition.z > 0);
+        }
+
+        public void newTarget(GameObject nextBox)
+        {
+            Vector3 origin = Cursor.transform.position;
+            TargetGameObject = nextBox;
+            
+            if (origin.z * TargetGameObject.transform.position.z < 0) //Case when Object is behind the Cursor (+*+>0 & -*->0 & +*-.<0 & -*+<=)
+            {
+                targetBehind = true;
+                middlePoint = TargetGameObject.transform.position;
+                middlePoint.z = 0;
+                //if ((TargetGameObject.transform.position - origin).x < 0) //Target left
+                if (origin.x < 0) //Target left
+                {
+                    middlePoint.x = -1.5f;
+                }
+                else
+                {
+                    middlePoint.x = 1.5f; //Target right
+                }
+                middlePoint.y = (middlePoint.y + origin.y) / 2; //(middlePoint.y + origin.y) / 2;
+               // cursorToMiddlePoint = middlePoint - origin;
+                middlePointToTarget = TargetGameObject.transform.position - middlePoint;
+               // overallVectorLength = cursorToMiddlePoint.magnitude;
+               // currentVectorLength = 0f;
+               // distancePercent = 0f;
+               // oldCursorPosition = origin;
+                //targetDir = middlePoint - origin;
+                //overallAngle = Vector3.Angle(targetDir, Camera.main.transform.position);
+            }
+            
+        }
+
+        private void GetDirectionIndicatorPositionAndRotation(Vector3 camToObjectDirection, out Vector3 position, out Quaternion rotation)
+        {
+            // Find position:
+            // Save the Cursor transform position in a variable.
+
+            // Project the camera to target direction onto the screen plane.
+            //Vector3 cursorIndicatorDirection = Vector3.ProjectOnPlane(camToObjectDirection, -1 * Camera.main.transform.forward);
+
+            // Debug.Log("camtoObjectDIrection: " + camToObjectDirection + " Cam: " + -1 * Camera.main.transform.forward + " Cursor: " + Cursor.transform.position);
+
+            //Debug.Log(("cursorIndicatorDirection: " + cursorIndicatorDirection));
+
+            //ADDED FROM ME
+            //GameObject Cursor = GameObject.Find("DefaultCursor");
+            //Vector3 cursorPosition = Cursor.transform.position;
+
+            /* if (TargetGameObject.transform.position.z > 0)
+             {
+                 lineStartingPosition.z -= 0.1f;
+                 lineTargetPosition.z -= 0.1f;
+             }
+             else
+             {
+                 lineStartingPosition.z += 0.1f;
+                 lineTargetPosition.z += 0.1f;
+             }
+             Vector3[] positions = new[] { lineStartingPosition, lineTargetPosition };
+              */
+            //Debug.Log(position);
+            //lineStartingPosition = lineStartingPosition + Vector3.back * 0.5f;
+            //targetDir = middlePoint - position;
+            //currentAngle = Vector3.Angle(targetDir, Camera.main.transform.position); //No Idea if this is right
+            // Vector3 cursorIndicatorDirection = camToObjectDirection;
+            //cursorIndicatorDirection.Normalize();
+
+            position = Cursor.transform.position;
+            Vector3 lineTargetPosition;
+            
+            if (targetBehind)
+            {
+                //middlePoint.y = (middlePoint.y + position.y) / 2;  //EIG GUT
+               // distancePercent = dreiecksfunktion(position.z);
+                //cursorIndicatorDirection = Vector3.ProjectOnPlane(middlePoint + distancePercent * middlePointToTarget, -1 * Camera.main.transform.forward);
+                cursorIndicatorDirection = middlePoint - position; // + distancePercent * middlePointToTarget;
+                cursorIndicatorDirection.Normalize();
+                lineTargetPosition = middlePoint; //+ distancePercent * middlePointToTarget;
+                Debug.Log("Percent: " + distancePercent + "CursorPosition: " + position + " LineTargetPosition: " +
+                          lineTargetPosition + " TargetGameObjectPosition: " + TargetGameObject.transform.position +
+                          " MiddlePoint: " + middlePoint);
+                if (position.z > -0.1f && position.z < 0.1)
+                {
+                    targetBehind = false;
+                }
+            }
+            else {           
+                cursorIndicatorDirection = camToObjectDirection;
+                cursorIndicatorDirection.Normalize();
+                lineTargetPosition = TargetGameObject.transform.position;
+            }
+
+            Vector3[] positions = new[] { position, lineTargetPosition };
+            line.SetPositions(positions);
+           // Debug.Log(position);
+
+
+            // If the direction is 0, set the direction to the right.
+            // This will only happen if the camera is facing directly away from the target.
+            if (cursorIndicatorDirection == Vector3.zero)
+            {
+                cursorIndicatorDirection = Camera.main.transform.right;
+            }
+
+            // The final position is translated from the center of the screen along this direction vector.
+            //position = origin; // + cursorIndicatorDirection * MetersFromCursor; 
+
+            // Find the rotation from the facing direction to the target object. !directionIndicatorDefaultRotation = Upwards)!
+            rotation = Quaternion.LookRotation(Camera.main.transform.forward, cursorIndicatorDirection) * directionIndicatorDefaultRotation;
+
+
+        }
+
+        private float dreiecksfunktion(float zValue)
+        {
+            return Mathf.Max(1 - (Mathf.Abs(zValue) / 1.5f), 0);
+        }
+        private float calculateAngleDifference() //currentAngle = 0 --> 1 currentAngle = overallAngle --> 0
+        {
+            return (overallAngle - currentAngle) / 45f;
+        }
+    }
+}

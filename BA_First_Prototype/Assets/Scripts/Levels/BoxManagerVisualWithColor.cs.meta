@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f81f1c348864eb74e82ceccd50f03983
+timeCreated: 1502102367
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Indicator: {instanceID: 0}
+  - NormalMaterial: {fileID: 2100000, guid: 3407fd8c30b7f22459f97b31d33d8b20, type: 2}
+  - HighlightedMaterial: {fileID: 2100000, guid: d9e60f2573b365d4d820a3872fda48c0,
+      type: 2}
+  - GazeManager: {instanceID: 0}
+  - KeywordManager: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
