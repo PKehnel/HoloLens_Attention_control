@@ -342,12 +342,12 @@
 
   <ItemGroup>
     <ProjectReference Include="C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj">
-      <Project>{a3c78726-0363-4541-b627-6cc2a95d4239}</Project>
+      <Project>{1c8aa473-0895-4e39-bf3e-1912279c9869}</Project>
       <Name>Assembly-CSharp</Name>
       <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj">
-      <Project>{695fdb86-4f7e-4d3b-9a2b-d2b26b37b020}</Project>
+      <Project>{3b74ad0d-c8a6-43c7-beeb-3f178776f324}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
       <Private>False</Private>
     </ProjectReference>

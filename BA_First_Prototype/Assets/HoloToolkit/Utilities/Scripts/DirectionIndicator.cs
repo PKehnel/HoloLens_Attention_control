@@ -107,7 +107,7 @@ namespace HoloToolkit.Unity
             {
                 return;
             }
-            Camera mainCamera = Camera.current;
+            Camera mainCamera = Camera.main;
             // Direction from the Main Camera to this script's parent gameObject.
             Vector3 camToObjectDirection = gameObject.transform.position - mainCamera.transform.position;
             camToObjectDirection.Normalize();
@@ -134,6 +134,8 @@ namespace HoloToolkit.Unity
         private bool IsTargetVisible(Camera mainCamera)
         {
             // This will return true if the target's mesh is within the Main Camera's view frustums.
+            // testing for visibilty
+            //return true;
             Vector3 targetViewportPosition = mainCamera.WorldToViewportPoint(gameObject.transform.position);
             return (targetViewportPosition.x > VisibilitySafeFactor && targetViewportPosition.x < 1 - VisibilitySafeFactor &&
                     targetViewportPosition.y > VisibilitySafeFactor && targetViewportPosition.y < 1 - VisibilitySafeFactor &&

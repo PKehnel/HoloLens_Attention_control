@@ -7,7 +7,7 @@
 # Default behavior is to never overwrite files
 BA_First_Prototype.sln: modified
 BA_First_Prototype\App.cs: FA2FD7F35A579BC876DE4214AA081B13
-BA_First_Prototype\BA_First_Prototype.csproj: 6D0FE36D3B4831FF7B3018E7784D2F67
+BA_First_Prototype\BA_First_Prototype.csproj: modified
 BA_First_Prototype\BA_First_Prototype.csproj.user: modified
 BA_First_Prototype\Package.appxmanifest: F95C48A33C6553A50853459694D15D6C
 BA_First_Prototype\project.json: 1D02BC64BAC0D041019673A1C4C51737

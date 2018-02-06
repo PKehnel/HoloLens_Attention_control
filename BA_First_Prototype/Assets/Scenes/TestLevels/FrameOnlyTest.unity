@@ -2240,6 +2240,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2db04283121ca74495c2ee000fb4243, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1033704205 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012943254746, guid: b2db04283121ca74495c2ee000fb4243,
+    type: 2}
+  m_PrefabInternal: {fileID: 1033704204}
 --- !u!1001 &1147942864
 Prefab:
   m_ObjectHideFlags: 0
@@ -2496,11 +2501,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a72bdb251e5ce488e5c51f0a9c657b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cursor: {fileID: 1499919135}
+  Cursor: {fileID: 1033704205}
   DirectionIndicatorObject: {fileID: 133742, guid: e123cce6ed201f447a1a4b3346f242e9,
     type: 2}
-  DirectionIndicatorColor: {r: 1, g: 0, b: 0, a: 1}
-  VisibilitySafeFactor: 0.5
+  DirectionIndicatorColor: {r: 0, g: 0, b: 1, a: 1}
+  VisibilitySafeFactor: 0.1
   MetersFromCursor: 0.3
 --- !u!1001 &1310785922
 Prefab:
@@ -2678,11 +2683,6 @@ MonoBehaviour:
   colliderBased: 0
   permanent: 0
   lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
---- !u!1 &1499919135 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012943254746, guid: b2db04283121ca74495c2ee000fb4243,
-    type: 2}
-  m_PrefabInternal: {fileID: 1033704204}
 --- !u!1001 &1520447111
 Prefab:
   m_ObjectHideFlags: 0
@@ -3078,6 +3078,11 @@ MonoBehaviour:
   colliderBased: 0
   permanent: 0
   lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
+--- !u!4 &1649053471 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4433928766869854, guid: 2ffc73cf6197aeb42b1500e055c1d0e8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1649053468}
 --- !u!1001 &1650018055
 Prefab:
   m_ObjectHideFlags: 0
@@ -3332,6 +3337,69 @@ MonoBehaviour:
   colliderBased: 0
   permanent: 0
   lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
+--- !u!1001 &1863586794
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1649053471}
+    m_Modifications:
+    - target: {fileID: 427654, guid: e123cce6ed201f447a1a4b3346f242e9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427654, guid: e123cce6ed201f447a1a4b3346f242e9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427654, guid: e123cce6ed201f447a1a4b3346f242e9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427654, guid: e123cce6ed201f447a1a4b3346f242e9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 427654, guid: e123cce6ed201f447a1a4b3346f242e9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427654, guid: e123cce6ed201f447a1a4b3346f242e9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427654, guid: e123cce6ed201f447a1a4b3346f242e9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 427654, guid: e123cce6ed201f447a1a4b3346f242e9, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e123cce6ed201f447a1a4b3346f242e9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1863586795 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 133742, guid: e123cce6ed201f447a1a4b3346f242e9, type: 2}
+  m_PrefabInternal: {fileID: 1863586794}
+--- !u!114 &1863586796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1863586795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a72bdb251e5ce488e5c51f0a9c657b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cursor: {fileID: 1033704205}
+  DirectionIndicatorObject: {fileID: 133742, guid: e123cce6ed201f447a1a4b3346f242e9,
+    type: 2}
+  DirectionIndicatorColor: {r: 1, g: 0, b: 0.4344826, a: 1}
+  VisibilitySafeFactor: 0.1
+  MetersFromCursor: 0.3
 --- !u!1001 &1875147119
 Prefab:
   m_ObjectHideFlags: 0
