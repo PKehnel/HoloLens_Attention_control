@@ -75,7 +75,7 @@ public class BoxManagerFrame : BoxManagerAbstract
 
     public override void CheckIfBoxHit(GameObject hitObject)
     {
-        if (nextBox.Equals(hitObject))
+        if (nextBox.Equals(other: hitObject))
         {
             hitObject.GetComponent<Renderer>().material = HighlightedMaterial;
             KeywordManager.StartKeywordRecognizer();

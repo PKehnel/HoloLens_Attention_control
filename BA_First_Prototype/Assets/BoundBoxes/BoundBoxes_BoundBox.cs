@@ -7,8 +7,10 @@ public class BoundBoxes_BoundBox : MonoBehaviour {
 	
 	public bool colliderBased = false;
 	public bool permanent = false; //permanent//onMouseDown
-	
-	public Color lineColor = new Color(0f,1f, 0.4f,0.74f);
+
+    private Color color0 = new Color(00, 1f, 1f, 1f);
+    private Color color1 = new Color(1f, 00, 00, 1f);
+    private Color lineColor = new Color(00, 00, 00, 00);
 
 	private Bounds bound;
 	
@@ -61,7 +63,11 @@ public class BoundBoxes_BoundBox : MonoBehaviour {
 	}
 	
 	void LateUpdate() {
-		cameralines.setOutlines(lines,lineColor);
+        if (lineColor == color0)
+            lineColor = color1;
+        else
+            lineColor = color0;
+        cameralines.setOutlines(lines,lineColor);
 	}
 	
 	void calculateBounds() {

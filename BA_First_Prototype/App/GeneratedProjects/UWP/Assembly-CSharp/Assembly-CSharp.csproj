@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1eca4a6c-d890-4bd7-9a26-3a8cf90103d6}</ProjectGuid>
+    <ProjectGuid>{99271413-b26f-436a-9a3a-7e29bc82dcaf}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AssemblyCSharpWSA</RootNamespace>
@@ -131,7 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj">
-      <Project>{61ed04a9-611b-462f-ba4b-830e077464c1}</Project>
+      <Project>{2506ebbf-e7ec-457e-aadf-dfc39ddcb7c5}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <Reference Include="UnityEngine.TilemapModule">
@@ -336,6 +336,9 @@
     <SDKReference Include="WindowsTeam, Version=10.0.16299.0"/>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(UnityProjectDir)Assets\adjustLight.cs">
+      <Link>adjustLight.cs</Link>
+    </Compile>
     <Compile Include="$(UnityProjectDir)Assets\BoundBoxes\BoundBoxes_BoundBox.cs">
       <Link>BoundBoxes\BoundBoxes_BoundBox.cs</Link>
     </Compile>

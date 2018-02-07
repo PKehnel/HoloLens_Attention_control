@@ -219,6 +219,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\adjustLight.cs" />
     <Compile Include="Assets\BoundBoxes\BoundBoxes_BoundBox.cs" />
     <Compile Include="Assets\BoundBoxes\BoundBoxes_drawLines.cs" />
     <Compile Include="Assets\BoundBoxes\BoundBoxes_maxCamera.cs" />

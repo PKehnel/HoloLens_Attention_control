@@ -184,7 +184,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &85551318
 Prefab:
   m_ObjectHideFlags: 0
@@ -257,7 +256,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &102848988
 Prefab:
   m_ObjectHideFlags: 0
@@ -330,7 +328,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &157304891
 Prefab:
   m_ObjectHideFlags: 0
@@ -403,7 +400,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &221036640
 Prefab:
   m_ObjectHideFlags: 0
@@ -476,7 +472,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &232568577
 Prefab:
   m_ObjectHideFlags: 0
@@ -579,7 +574,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &307193124
 Prefab:
   m_ObjectHideFlags: 0
@@ -682,7 +676,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &344929754
 Prefab:
   m_ObjectHideFlags: 0
@@ -755,7 +748,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &370813328
 Prefab:
   m_ObjectHideFlags: 0
@@ -858,7 +850,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &386983435
 Prefab:
   m_ObjectHideFlags: 0
@@ -961,7 +952,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &426814684
 Prefab:
   m_ObjectHideFlags: 0
@@ -1034,7 +1024,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1 &448094178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,7 +1212,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &538867232
 Prefab:
   m_ObjectHideFlags: 0
@@ -1326,7 +1314,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &573805891
 Prefab:
   m_ObjectHideFlags: 0
@@ -1399,7 +1386,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &631369224
 Prefab:
   m_ObjectHideFlags: 0
@@ -1472,7 +1458,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &668445500
 Prefab:
   m_ObjectHideFlags: 0
@@ -1545,7 +1530,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &700628185
 Prefab:
   m_ObjectHideFlags: 0
@@ -1648,7 +1632,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &724878216
 Prefab:
   m_ObjectHideFlags: 0
@@ -1751,7 +1734,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &752557449
 Prefab:
   m_ObjectHideFlags: 0
@@ -1824,7 +1806,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &767483342
 Prefab:
   m_ObjectHideFlags: 0
@@ -1897,7 +1878,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &822526583
 Prefab:
   m_ObjectHideFlags: 0
@@ -1970,7 +1950,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &833913192
 Prefab:
   m_ObjectHideFlags: 0
@@ -2043,7 +2022,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &858721155
 Prefab:
   m_ObjectHideFlags: 0
@@ -2124,7 +2102,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &925506830
 Prefab:
   m_ObjectHideFlags: 0
@@ -2197,7 +2174,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1033704204
 Prefab:
   m_ObjectHideFlags: 0
@@ -2347,7 +2323,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1237619071
 Prefab:
   m_ObjectHideFlags: 0
@@ -2420,7 +2395,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1245665210
 Prefab:
   m_ObjectHideFlags: 0
@@ -2489,7 +2463,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!114 &1245665213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2609,7 +2582,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1467477711
 Prefab:
   m_ObjectHideFlags: 0
@@ -2682,7 +2654,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1520447111
 Prefab:
   m_ObjectHideFlags: 0
@@ -2785,7 +2756,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1559163979
 Prefab:
   m_ObjectHideFlags: 0
@@ -2858,7 +2828,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1577920084
 Prefab:
   m_ObjectHideFlags: 0
@@ -2931,7 +2900,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1578543844
 Prefab:
   m_ObjectHideFlags: 0
@@ -3004,7 +2972,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1649053468
 Prefab:
   m_ObjectHideFlags: 0
@@ -3077,12 +3044,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!4 &1649053471 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4433928766869854, guid: 2ffc73cf6197aeb42b1500e055c1d0e8,
     type: 2}
   m_PrefabInternal: {fileID: 1649053468}
+--- !u!114 &1649053472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1649053469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee20355dc1fb254f9b530a0d47d2f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!108 &1649053475
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1649053469}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 3
+  m_Color: {r: 0.44852942, g: 0.0989403, b: 0.0989403, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 2
+  m_AreaSize: {x: 0.2, y: 0.2}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1650018055
 Prefab:
   m_ObjectHideFlags: 0
@@ -3163,7 +3176,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1706376430
 Prefab:
   m_ObjectHideFlags: 0
@@ -3336,7 +3348,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1863586794
 Prefab:
   m_ObjectHideFlags: 0
@@ -3502,7 +3513,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1978325006
 Prefab:
   m_ObjectHideFlags: 0
@@ -3575,7 +3585,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
 --- !u!1001 &1987587350
 Prefab:
   m_ObjectHideFlags: 0
@@ -3656,7 +3665,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
+--- !u!122 &1987587357
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1987587351}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4282104345
+  m_Size: 0.2
 --- !u!1 &2011237706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3913,4 +3932,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderBased: 0
   permanent: 0
-  lineColor: {r: 0, g: 1, b: 0.4, a: 0.74}
