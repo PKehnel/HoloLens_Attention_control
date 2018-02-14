@@ -421,6 +421,24 @@
     <AppxPackagedFile Include="C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\BA_First_Prototype\Data\boot.config">
       <PackagePath>Data\boot.config</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\BA_First_Prototype\Data\GI\level2\b2\b2bcd98483f18777f7ec4c3e55dfa2c8.caw">
+      <PackagePath>Data\GI\level2\b2\b2bcd98483f18777f7ec4c3e55dfa2c8.caw</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\BA_First_Prototype\Data\GI\level2\b2\b2bcd98483f18777f7ec4c3e55dfa2c8.ecm">
+      <PackagePath>Data\GI\level2\b2\b2bcd98483f18777f7ec4c3e55dfa2c8.ecm</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\BA_First_Prototype\Data\GI\level2\b2\b2bcd98483f18777f7ec4c3e55dfa2c8.iws.sse">
+      <PackagePath>Data\GI\level2\b2\b2bcd98483f18777f7ec4c3e55dfa2c8.iws.sse</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\BA_First_Prototype\Data\GI\level2\b2\b2bcd98483f18777f7ec4c3e55dfa2c8.rsc.sse">
+      <PackagePath>Data\GI\level2\b2\b2bcd98483f18777f7ec4c3e55dfa2c8.rsc.sse</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\BA_First_Prototype\Data\GI\level2\b2\b2bcd98483f18777f7ec4c3e55dfa2c8.rgb">
+      <PackagePath>Data\GI\level2\b2\b2bcd98483f18777f7ec4c3e55dfa2c8.rgb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\BA_First_Prototype\Data\GI\level2\b2\b2bcd98483f18777f7ec4c3e55dfa2c8.vis">
+      <PackagePath>Data\GI\level2\b2\b2bcd98483f18777f7ec4c3e55dfa2c8.vis</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\BA_First_Prototype\Data\globalgamemanagers">
       <PackagePath>Data\globalgamemanagers</PackagePath>
     </AppxPackagedFile>

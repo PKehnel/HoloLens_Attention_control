@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{99271413-b26f-436a-9a3a-7e29bc82dcaf}</ProjectGuid>
+    <ProjectGuid>{c83ebc05-d0b8-4499-944d-ecbfa343573f}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AssemblyCSharpWSA</RootNamespace>
@@ -131,7 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\Paul Kehnel\Desktop\BachelorArbeit\05 Implementierung\BA_First_Prototype\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj">
-      <Project>{2506ebbf-e7ec-457e-aadf-dfc39ddcb7c5}</Project>
+      <Project>{2d8ee851-2f12-42d7-85fc-107d7e243ce2}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <Reference Include="UnityEngine.TilemapModule">

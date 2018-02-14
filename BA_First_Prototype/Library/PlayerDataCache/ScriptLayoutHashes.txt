@@ -148,6 +148,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.DragRigidbody
 26ca77d218d4559a974b1dcd52ec178e Assembly-CSharp.dll:.BoxManagerAudioWithFilter
 047eb998adc2d948ddc55c599621cd6b Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.RawInteractionSourcesInput
+f91be9115eb5df12524ac377c9cc9251 Assembly-CSharp.dll:.adjustLight
 de3b066328430f193f759800290c2850 Assembly-CSharp.dll:.ObjectIndicatorVisual
 78ebae5ed9b3edeb216da437b99754a4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
 876eedec0f41a589c0d692b969151da8 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.SpeechInputSource
@@ -250,4 +251,3 @@ c200d5e5157786d95373f6cec9caf166 Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMa
 294210f7e02f750ff0f7733d3ee18691 Assembly-CSharp.dll:HoloToolkit.Sharing.VoiceChat.MicrophoneReceiver
 b5f6dad96f9ec0ab2acee714ce9ff4f7 Assembly-CSharp.dll:.BoxManagerVisual
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.adjustLight
